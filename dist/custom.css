@@ -1,0 +1,9 @@
+.screen {
+  display: flex;
+  align-items: center;
+}
+
+.screen img {
+  max-height: 50vh;
+  padding-right: 1em;
+}

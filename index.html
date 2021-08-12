@@ -4,11 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Donumenta Workshop / Ärro Prototyp</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/custom.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +17,410 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Workshop Donumenta</h1>
+					<h2>Ärro - Prototyp</h2>
+					<h3>Stefan Langenmaier</h3>
+
+					<aside class="notes">
+						Erstmal vielen Dank für die organisation des Workshops. Ich denke das hilft uns ungemein ein möglichst gutes gemeinsames verständnis zu schaffen.
+					</aside>
+				</section>
+
+				<section data-background="images/stefan-langenmaier.png"  data-background-repeat="no"  data-background-position="right">
+					<h2>Zu mir</h2>
+
+					<a href="https://stefan-langenmaier.github.io/lebenslauf/">Stefan Langenmaier</a>
+
+					<p>Diplom Informatik in Ulm studiert</p>
+
+					<ul>
+						<li>Web-Entwickler</li>
+						<li>Software-Berater</li>
+						<li>Berater für Suchmaschinen</li>
+						<li>Operations-Engineer</li>
+					</ul>
+					
+					<aside class="notes">
+						Sprachlich aus dem Schwäbischen.
+
+						Hab den in verschiedenen Rollen als Web-Entwickler, Software-Berater, Berater für Suchmaschinen und heute als Operations-Engineer für die Sicherheit, Betrieb und Architektur von Anwendungsumgebungen.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+
+					<ol>
+						<li>Prototyp</li>
+						<li>Technik</li>
+						<li>Schnittpunkte</li>
+						<li>Ziel</li>
+					</ol>
+
+					<aside class="notes">
+						<ol>
+							<li>Startpunkt, was ist schon vorhanden</li>
+							<li>Details zum technischen Unterbau und wie mitgearbeitet werden kann</li>
+							<li>Offensichtliche Anpassungen bei denen ich Unterstützung brauchen kann</li>
+							<li>Mein Verständnis wo wir hinwollen</li>
+						</ol>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Zum Prototypen</h2>
+
+					<h3>Ärro</h3>
+
+					Privates Projekt ursprünglich zum Treffen von anderen Leuten.
+
+					<aside class="notes">
+						Dann aber festgestellt ohne Leute meistens recht langweilig.
+						Eingebaut das es neben Leuten auch fixe Punkte hinterlegt sind und wenn man den Punkt erreicht ein Medium dargestellt.
+						Das hab ich dann auch mit 3D-Modellen gebaut.
+
+						Hab dann mit anderen Leuten festgestellt das es einen ganz interessanten Schnitzeljagdcharakter hat.
+
+						Ich würde auf den folgenden Slides, diese Anwendung genauer vorstellen und zeigen an welcher Stelle ich mir Anpassungen vorstellen kann um sie für dieses Projekt einzusetzen.
+
+						Am Ende würde ich technische Punkte erwähnen um festzustellen inwiefern wir direkt zusammenarbeiten können
+					</aside>
+				</section>
+
+				<section>
+					<h2>Demo</h2>
+
+					<a href="http://localhost:5000">Start</a>
+
+					<aside class="notes">
+						Ich geh kurz über die existierenden und auch geplanten Screens der Anwendung. Dabei gibt es sicherlich einige Punkte die nicht relevant sind,  die wir entfernen sollten, die wir ändern sollten und die zusätzlich nötig sind.
+
+						Die eigentlich Idee auszuarbeiten kommen wir sicherlich noch in diesem Workshop. 
+					</aside>
+				</section>
+
+				<section>
+					<h2>Lade Screen</h2>
+
+					<div class="screen">
+						<img src="images/screen-load.png">
+	
+						<ul>
+							<li>Logo der App sichtbar</li>
+							<li>Farbschema/Hintergrund</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Rechtliches</h2>
+
+					<div class="screen">
+						<img src="images/screen-legal.png">
+						
+						<ul>
+							<li>Müsste nochmal abgestimmt und neu geschrieben werden</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Berechtigungen</h2>
+
+					<div class="screen">
+						<div class="r-stack">
+							<img class="fragment" src="images/screen-permission-gps.png">
+							<img class="fragment" src="images/screen-permission-start.png">
+						</div>
+						
+						<ul>
+							<li>Sehr verschieden auf unterschiedlichen Geräten</li>
+							<li>Mehrere Schritte nötig</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Navigation</h2>
+
+					<div class="screen">
+						<img src="images/screen-nav-target.png">
+						
+						<ul>
+							<li>Richtung</li>
+							<li>Abstand</li>
+							<li>Ziel (Status/Beschreibung/Name)</li>
+							<li>Status (Filter/Suche)</li>
+						</ul>
+					</div>
+
+					<aside class="notes">
+						<ul>
+							<li>Default, bringt einen zum nächsten Punkt</li>
+							<li>Bildschirm mit grösster Komplexität</li>
+							<li>Richtung</li>
+							<li>Abstand</li>
+							<li>Ziel (Status/Beschreibung/Name)</li>
+							<li>Status (Filter/Suche)</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Gefunden</h2>
+
+					<div class="screen">
+						<div class="r-stack">
+							<img class="fragment" src="images/screen-nav-found-image.png">
+							<img class="fragment" src="images/screen-nav-found-model.png">
+							<img class="fragment" src="images/screen-nav-found-link.png">
+						</div>
+
+						<ul>
+							<li>Farbwechsel</li>
+							<li>Bewertung</li>
+							<li>Anzeige des hinterlegten Mediums</li>
+						</ul>
+					</div>
+
+					<aside class="notes">
+						<ul>
+							<li>Farbwechsel</li>
+							<li>Vibration (geplant)</li>
+							<li>Bewertung</li>
+							<li>Anzeige des hinterlegten Mediums</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Persönlich</h2>
+
+					<div class="screen">
+						<img src="images/screen-personal.png">
+						
+						<ul>
+							<li>Statistiken über sich selbst</li>
+							<li>Anzahl ersteller Punkte</li>
+							<li>Anzahl gefundener Punkte</li>
+							<li>Anzahl Aufzeichungspunkte</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Rangliste</h2>
+
+					<div class="screen">
+						<img src="images/screen-menu.png">
+						
+						<ul>
+							<li>nicht implementiert</li>
+							<li>Vergleich mit anderen</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Gefundene Punkte</h2>
+
+					<div class="screen">
+						<img src="images/screen-menu.png">
+						
+						<ul>
+							<li>nicht implementiert</li>
+						</ul>
+					</div>
+				</section>
+					
+				<section>
+					<h2>Erstellte Punkte</h2>
+
+					<div class="screen">
+						<img src="images/screen-created-points.png">
+						
+						<ul>
+							<li>Liste mit selbst erstellten Punkten</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Punkte erstellen</h2>
+
+					<div class="screen">
+						<img src="images/screen-upload.png">
+						
+						<ul>
+							<li>Datei hochladen</li>
+							<li>an der aktuellen Position mit seinem Status hinterlegen</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Teilen</h2>
+
+					<div class="screen">
+						<img src="images/screen-share.png">
+						
+						<ul>
+							<li>Link erstellen den man an Freunde senden kann (Messenger wie Whatsapp, Telegram aber auch ein per Mail)</li>
+							<li>Link kann auch als QR-Code auf Flyer verwendet werden</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Account anlegen</h2>
+
+					<div class="screen">
+						<img src="images/screen-menu.png">
+						
+						<ul>
+							<li>nicht implementiert</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Daten löschen</h2>
+
+					<div class="screen">
+						<img src="images/screen-delete-account.png">
+						
+						<ul>
+							<li>Entfernt den Nutzer von der virtuellen Karte und setzt seine gefundenen Daten zurück.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Zusammenfassung</h2>
+
+					<ul>
+						<li>Abenteuer/Entdeckung/Überaschung im Vordergrund</li>
+						<li>Möglich mit anderen Menschen in Kontakt zu kommen</li>
+						<li>Experimentelles Interface</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Technisch</h2>
+
+					<ul>
+						<li>Webanwendung</li>
+						<li>geteste mit Chrome, Firefox und teilweise mit Safari</li>
+						<li>Orientation nur bedingt möglich</li>
+						<li>AR nur auf gewissen Geräten/Modellen möglich</li>
+					</ul>				</section>
+
+				<section>
+					<h2>Code Organisation</h2>
+
+					<ul>
+						<li>Backend</li>
+						<li>Frontend</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Backend</h2>
+
+					<ul>
+						<li>API (Java/Quarkus)</li>
+						<li>Datenbank (Elasticsearch)</li>
+						<li>Dateien</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Frontend</h2>
+
+					<ul>
+						<li>SPA (Javascript/Svelte)</li>
+						<li>CSS-Grid (Kein CSS-Framework)</li>
+						<li>model-viewer</li>
+					</ul>
+
+					<aside class="notes">
+						Ist das Technologie mit der sie arbeiten können?
+					</aside>
+				</section>
+
+				<section>
+					<h2>Lizenz</h2>
+
+					<a href="https://en.wikipedia.org/wiki/Affero_General_Public_License">AGPL</a>
+
+					<aside class="notes">
+						Die Änderungen sind öffentlich und für andere verwendbar. Ich denke dadurch kann eine zukünftige Kooperation mit anderen Gruppen wie z.B. der Universität danach leicht möglich sein.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Anpassungen</h2>
+
+					<ul>
+						<li>Allgemeins Styling (Farbschema, Logo)</li>
+						<li>Integration einer Hilfe</li>
+						<li>Verbesserung der UX</li>
+						<li>3D-Modelle aufbereiten</li>
+						<li>Rechtliches abklären</li>
+					</ul>
+
+					<aside class="notes">
+						Offensichtliche Verbesserungen bei denen ich Hilfe brauchen kann.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Entscheidungen</h2>
+
+					<ul>
+						<li>Sprache/Text</li>
+						<li>Welche Funtktionalität wird benötigt?</li>
+						<li>In welcher Reihenfolge machen wir das?</li>
+						<li>Was wollen wir in einer zukünftigen Version haben?</li>
+					</ul>
+
+					<aside class="notes">
+						Entscheidungen die noch zu fällen sind, mit starkem
+					</aside>
+				</section>
+
+				<section>
+					<h2>Arbeitsweise</h2>
+
+					<ul>
+						<li>Wo?</li>
+						<li>Wer sortiert die Prioritäten?</li>
+						<li>Wann können wir regelmässige Abstimmungen zu Details machen?</li>
+					</ul>
+
+					<aside class="notes">
+						Wo können wir die erarbeiten Todos tracken, priorisieren und verteilen? GitHub
+					</aside>
+				</section>
+
+				<section>
+					<h2>Ziel</h2>
+
+					<ul>
+						<li>einfach</li>
+						<li>unterhaltsam</li>
+						<li>überraschend</li>
+					</ul>
+
+					<aside class="notes">
+						Damit will ich es erstmal wieder belassen.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Danke!</h2>
+				</section>
 			</div>
 		</div>
 
